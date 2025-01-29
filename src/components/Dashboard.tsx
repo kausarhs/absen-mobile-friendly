@@ -203,7 +203,7 @@ export default function Dashboard() {
                     <input
                       type="text"
                       required
-                      className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors duration-200"
+                      className="mt-1 block w-full rounded-md py-1 border-2 border-blue-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors duration-200"
                       value={newStudent.student_id}
                       onChange={(e) =>
                         setNewStudent({ ...newStudent, student_id: e.target.value })
@@ -217,7 +217,7 @@ export default function Dashboard() {
                     <input
                       type="text"
                       required
-                      className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors duration-200"
+                      className="mt-1 block w-full rounded-md py-1 border-2 border-blue-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors duration-200"
                       value={newStudent.name}
                       onChange={(e) =>
                         setNewStudent({ ...newStudent, name: e.target.value })
@@ -231,7 +231,7 @@ export default function Dashboard() {
                     <input
                       type="text"
                       required
-                      className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors duration-200"
+                      className="mt-1 block w-full rounded-md py-1 border-2 border-blue-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-colors duration-200"
                       value={newStudent.class}
                       onChange={(e) =>
                         setNewStudent({ ...newStudent, class: e.target.value })
@@ -262,7 +262,7 @@ export default function Dashboard() {
         <div className="bg-white dark:bg-gray-800 shadow rounded-lg transition-colors duration-200">
           <div className="p-4 sm:p-6">
             <div className="flex flex-col space-y-4 mb-6">
-              <div className="relative w-full">
+              <div className={showAddForm ? 'hidden' : 'relative w-full'}> 
                 <input
                   type="text"
                   placeholder="Search students..."
